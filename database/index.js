@@ -48,6 +48,17 @@ let izakaya = new Restaurant({
   map_photo: 'http://d2wufhbvuoea5v.cloudfront.net/izakaya_googlemaps_screenshot.jpg'
 });
 
+// let saveIzakaya = () => {
+//   izakaya.save((err) => {
+//     if (err) {
+//       console.log(err);
+//       return;
+//     }
+//   });
+// }
+
+// saveIzakaya();
+
 let save = () => {
   izakaya.save((err) => {
     if (err) {
@@ -77,7 +88,7 @@ let save = () => {
         { saturday: ['5:00', '11:00'] },
         { sunday: ['5:00', '10:00'] },
       ],
-      address: faker.address.streetAddress() + ', ' + faker.address.city() + ', ' + faker.address.state() + ', ' + faker.address.zipCode(),
+      address: faker.address.streetAddress() + ', ' + faker.address.city() + ', ' + faker.address.state() + ', ' + faker.address.zipCode() + ', ' + faker.address.country(),
       phone: faker.phone.phoneNumberFormat(),
       website: faker.internet.url(),
       map_photo: 'http://d2wufhbvuoea5v.cloudfront.net/izakaya_googlemaps_screenshot.jpg'
@@ -94,4 +105,6 @@ let save = () => {
 
 save();
 
-module.exports.save = save;
+module.exports = {
+  save
+}
