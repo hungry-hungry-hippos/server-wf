@@ -10,24 +10,8 @@ db.once('open', function() {
 
 let restaurantSchema = new mongoose.Schema({
   restaurant_id: Number,
-  business_days: [
-    {type: Number},
-    {type: Number},
-    {type: Number},
-    {type: Number},
-    {type: Number},
-    {type: Number},
-    {type: Number}
-  ],
-  business_hours: [
-    {type: [String, String]},
-    {type: [String, String]},
-    {type: [String, String]},
-    {type: [String, String]},
-    {type: [String, String]},
-    {type: [String, String]},
-    {type: [String, String]},
-  ],
+  business_days: Array,
+  business_hours: Array,
   address: String,
   phone: String,
   website: String,
@@ -67,5 +51,5 @@ izakaya.save((err) => {
     console.log(err);
     return;
   }
-  // if (err) return handleError(err);
 });
+
