@@ -48,17 +48,6 @@ let izakaya = new Restaurant({
   map_photo: 'http://d2wufhbvuoea5v.cloudfront.net/izakaya_googlemaps_screenshot.jpg'
 });
 
-// let saveIzakaya = () => {
-//   izakaya.save((err) => {
-//     if (err) {
-//       console.log(err);
-//       return;
-//     }
-//   });
-// }
-
-// saveIzakaya();
-
 let save = () => {
   izakaya.save((err) => {
     if (err) {
@@ -105,6 +94,16 @@ let save = () => {
 
 save();
 
+let getIzakaya = (callback) => {
+  Restaurant.findOne({restaurant_id: 1}, (err, data) => {
+    if (err) {
+      callback(err);
+      return;
+    }
+    callback(null, data);
+  })
+};
+
 module.exports = {
-  save
-}
+  getIzakaya
+};
