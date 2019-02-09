@@ -1,17 +1,36 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
-  "engines": {
-    "node": ">=6.13.0"
-  },
+  "name": "service-wf",
+  "description": "Restaurant info and map",
+  "version": "1.0.0",
+  "main": "bundle.js",
+  "license": "ISC",
   "scripts": {
+    "test": "jest",
+    "build": "webpack -d -w",
+    "start": "nodemon server/index.js",
+    "seed": "nodemon database/index.js"
   },
+  "keywords": [],
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "mongoose": "^5.4.10",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "webpack": "^4.29.2",
+    "webpack-cli": "^3.2.3"
   }
 }
