@@ -50,10 +50,8 @@ let izakaya = new Restaurant({
 
 let save = () => {
   izakaya.save((err) => {
-    if (err) {
-      console.log(err);
-      return;
-    }
+    if (err) return console.log(err);
+    console.log('Izakaya info saved to db');
   });
 
   for (var i = 2; i < 101; i++) {
@@ -84,10 +82,8 @@ let save = () => {
     })
 
     fakeRestaurant.save((err) => {
-      if (err) {
-        console.log(err);
-        return;
-      }
+      if (err) return console.log(err);
+      console.log('Fake restaurant info saved to db');
     });
   }
 }
@@ -104,6 +100,4 @@ let getIzakaya = (callback) => {
   })
 };
 
-module.exports = {
-  getIzakaya
-};
+module.exports = { getIzakaya };
