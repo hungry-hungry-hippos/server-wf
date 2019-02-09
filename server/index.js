@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const bodyParser = require('body-parser');
 
 const { getIzakaya } = require('../database/index.js');
@@ -7,12 +6,13 @@ const { getIzakaya } = require('../database/index.js');
 const app = express();
 const port = 3030;
 
-app.use('/static', express.static(path.join(__dirname, '/client/dist')));
+app.use(express.static('client/dist'));
+app.use(bodyParser.json());
 
 app.get('/izakayaInfo', (req, res) => {
   getIzakaya( (err, data) => {
     if (err) {
-      res.sendStatus(418);
+      res.sendStatus(400);
       return;
     }
     res.status(200).send(data);
