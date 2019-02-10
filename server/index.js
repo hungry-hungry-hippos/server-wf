@@ -10,13 +10,15 @@ app.use(express.static('client/dist'));
 app.use(bodyParser.json());
 
 app.get('/izakayaInfo', (req, res) => {
-  getIzakaya( (err, data) => {
+  getIzakaya((err, data) => {
     if (err) {
       res.sendStatus(400);
       return;
     }
     res.status(200).send(data);
-  })
-})
+  });
+});
 
-app.listen(port, () => console.log(`Listening on port ${port}`))
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
