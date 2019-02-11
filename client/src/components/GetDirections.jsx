@@ -1,19 +1,18 @@
 import React from 'react';
 
-import { IconSize, SpanStyles, SpanHover } from './Styles';
+import { IconSize, SpanStyles, SpanHover, LinkStyle, LinkHover } from './Styles';
 
-class GetDirections extends React.Component {
-
-  render() {
-    return (
-      <div className="business-getDirections">
-        <IconSize src="https://s3-us-west-1.amazonaws.com/zagat-screenshots/getDirections_icon.jpg"></IconSize>
-        <SpanStyles>
-          <SpanHover>Get Directions</SpanHover>
-        </SpanStyles>
-      </div>
-    );
-  }
-}
+const GetDirections = () => (
+    <div className="business-getDirections">
+      <IconSize src="https://s3-us-west-1.amazonaws.com/zagat-screenshots/getDirections_icon.jpg"></IconSize>
+      <SpanStyles>
+        <SpanHover>
+          <LinkStyle href="https://www.google.com/maps/dir//37.7638272,-122.4740864/@37.7638466,-122.4763098,17z" target="_blank">
+            <LinkHover>Get Directions</LinkHover>
+          </LinkStyle>
+        </SpanHover>
+      </SpanStyles>
+    </div>
+);
 
 export default GetDirections;

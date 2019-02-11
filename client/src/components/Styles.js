@@ -8,7 +8,6 @@ export const SideBar = styled.div`
   letter-spacing: .013em;
   padding: 26px 32px 20px;
   cursor: pointer;
-  // hover: #b70038;
   max-width: 959px;
   max-height: 600px;
   width: 404px;
@@ -33,6 +32,17 @@ export const SpanStyles = styled.span`
 
 export const SpanHover = styled.span`
   ${SpanStyles}:hover & {
+    color: #b70038;
+  }
+`;
+
+export const LinkStyle = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
+
+export const LinkHover = styled.a`
+  ${LinkStyle}:hover & {
     color: #b70038;
   }
 `;
