@@ -1,13 +1,12 @@
 import React from 'react';
-import SideBar from './Styles';
+
+import { SideBar } from './Styles';
+
+import BusinessHours from './BusinessHours.jsx';
 
 const App = () => (
   <SideBar>
-    <div className="business-details">
-      <div className="business-hours">
-        <h1>Hello World</h1>
-      </div>
-    </div>
+    <BusinessHours />
   </SideBar>
 );
 
