@@ -31,6 +31,12 @@ export const SpanStyles = styled.span`
   box-sizing: border-box;
 `;
 
+export const SpanHover = styled.span`
+  ${SpanStyles}:hover & {
+    color: #b70038;
+  }
+`;
+
 export const MapSize = styled.img`
   width: 404px;
   height: 271px;

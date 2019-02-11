@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IconSize, SpanStyles } from './Styles';
+import { IconSize, SpanStyles, SpanHover } from './Styles';
 
 class Phone extends React.Component {
 
@@ -8,7 +8,9 @@ class Phone extends React.Component {
     return (
       <div className="business-phone">
         <IconSize src="https://s3-us-west-1.amazonaws.com/zagat-screenshots/phone_icon.jpg"></IconSize>
-        <SpanStyles>(415) 742-5122</SpanStyles>
+        <SpanStyles>
+          <SpanHover>(415) 742-5122</SpanHover>
+        </SpanStyles>
       </div>
     );
   }

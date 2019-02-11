@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconSize, SpanStyles } from './Styles';
+import { IconSize, SpanStyles, SpanHover } from './Styles';
 
 class BusinessHours extends React.Component {
 
@@ -15,9 +15,11 @@ class BusinessHours extends React.Component {
     return (
       <div className="business-hours">
         <IconSize src="https://s3-us-west-1.amazonaws.com/zagat-screenshots/business_hours_icon.jpg"></IconSize>
-        <SpanStyles><b>Closed </b></SpanStyles>
-        <SpanStyles> · </SpanStyles>
-        <SpanStyles> Reopens at 5:30 PM</SpanStyles>
+        <SpanStyles>
+          <SpanHover><b>Closed </b></SpanHover>
+          <SpanHover> · </SpanHover>
+          <SpanHover> Reopens at 5:30 PM</SpanHover>
+        </SpanStyles>
       </div>
     );
   }

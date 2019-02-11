@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IconSize, SpanStyles } from './Styles';
+import { IconSize, SpanStyles, SpanHover } from './Styles';
 
 class Website extends React.Component {
 
@@ -8,7 +8,9 @@ class Website extends React.Component {
     return (
       <div className="business-website">
         <IconSize src="https://s3-us-west-1.amazonaws.com/zagat-screenshots/website_icon.jpg"></IconSize>
-        <SpanStyles>www.izakayasozai.com</SpanStyles>
+        <SpanStyles>
+          <SpanHover>www.izakayasozai.com</SpanHover>
+        </SpanStyles>
       </div>
     );
   }

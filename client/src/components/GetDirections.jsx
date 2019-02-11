@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IconSize, SpanStyles } from './Styles';
+import { IconSize, SpanStyles, SpanHover } from './Styles';
 
 class GetDirections extends React.Component {
 
@@ -8,7 +8,9 @@ class GetDirections extends React.Component {
     return (
       <div className="business-getDirections">
         <IconSize src="https://s3-us-west-1.amazonaws.com/zagat-screenshots/getDirections_icon.jpg"></IconSize>
-        <SpanStyles>Get Directions</SpanStyles>
+        <SpanStyles>
+          <SpanHover>Get Directions</SpanHover>
+        </SpanStyles>
       </div>
     );
   }
