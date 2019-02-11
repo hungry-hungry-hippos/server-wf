@@ -6,6 +6,7 @@ import BusinessHours from './BusinessHours.jsx';
 import ResAddress from './ResAddress.jsx';
 import Phone from './Phone.jsx';
 import Website from './Website.jsx';
+import GetDirections from './GetDirections.jsx';
 
 const App = () => (
   <SideBar>
@@ -13,6 +14,7 @@ const App = () => (
     <ResAddress />
     <Phone />
     <Website />
+    <GetDirections />
   </SideBar>
 );
 
