@@ -3,8 +3,18 @@ import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import db from '../database/index';
+import App from '../client/src/components/App.jsx';
 
 Enzyme.configure({ adapter: new Adapter() });
+
+describe('App Components', () => {
+  // fix this test, 'cannot read property of undefined'
+  it('renders all App components', () => {
+    const wrapper = shallow(<App />);
+    // expect(wrapper.find(App)).to.have.lengthOf(6);
+    expect(wrapper.find(App)).length.toBe(6);
+  });
+});
 
 afterAll(() => db.db.close());
 
