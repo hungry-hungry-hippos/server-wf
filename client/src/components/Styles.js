@@ -1,10 +1,18 @@
 import styled from 'styled-components';
+// import { url } from 'inspector';
+// import { format } from 'util';
+
+// @font-face {
+//   font-family: 'Calibre-Regular';
+//   src: url('/CalibreWeb-Regular.woff2') format('woff2');
+// }
 
 export const SideBar = styled.div`
   display: table;
   color: #101820;
   background: white;
-  font: 16px/20px 'Calibre-Regular';
+  font-family: 'Calibre-Regular', sans-serif;
+  font: 16px/20px;
   letter-spacing: .013em;
   padding: 26px 32px 20px;
   cursor: pointer;
