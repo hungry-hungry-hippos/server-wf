@@ -10,7 +10,6 @@
     "no-path-concat": 0,
     "no-consistent-return": 0,
     "no-prefer-template": 0
-
   },
   "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb-base"]
 }

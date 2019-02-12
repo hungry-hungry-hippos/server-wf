@@ -24,8 +24,8 @@ class Website extends React.Component {
     const getData = (callback) => {
       $.get({
         url: 'http://localhost:3030/izakayaInfo',
-        success: (data) => callback(null, data.website),
-        error: (err) => callback(err),
+        success: data => callback(null, data.website),
+        error: err => callback(err),
       });
     };
 
@@ -46,7 +46,7 @@ class Website extends React.Component {
         <IconSize src="https://s3-us-west-1.amazonaws.com/zagat-screenshots/website_icon.jpg"></IconSize>
         <SpanStyles>
           <SpanHover>
-            <LinkStyle href={"http://" + this.state.website} target="_blank">
+            <LinkStyle href={'http://' + this.state.website} target="_blank">
               <LinkHover>{this.state.website}</LinkHover>
             </LinkStyle>
           </SpanHover>
