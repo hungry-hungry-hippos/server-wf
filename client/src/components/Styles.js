@@ -1,18 +1,20 @@
-import styled from 'styled-components';
-// import { url } from 'inspector';
-// import { format } from 'util';
+import styled, { createGlobalStyle } from 'styled-components';
 
-// @font-face {
-//   font-family: 'Calibre-Regular';
-//   src: url('/CalibreWeb-Regular.woff2') format('woff2');
-// }
+export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Calibre-Regular';
+    src: url('/fonts/CalibreWeb-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+`;
 
 export const SideBar = styled.div`
   display: table;
   color: #101820;
   background: white;
   font-family: 'Calibre-Regular', sans-serif;
-  font: 16px/20px;
+  font-size: 13px;
   letter-spacing: .013em;
   padding: 26px 32px 20px;
   cursor: pointer;
