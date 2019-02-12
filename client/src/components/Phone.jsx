@@ -12,10 +12,15 @@ class Phone extends React.Component {
     };
 
     this.getPhone = this.getPhone.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     this.getPhone();
+  }
+
+  handleClick() {
+    window.confirm('Open FaceTime?');
   }
 
   getPhone() {
@@ -43,7 +48,7 @@ class Phone extends React.Component {
       <div className="business-phone">
         <IconSize src="https://s3-us-west-1.amazonaws.com/zagat-screenshots/phone_icon.jpg"></IconSize>
         <SpanStyles>
-          <SpanHover>{this.state.phone}</SpanHover>
+          <SpanHover onClick={this.handleClick}>{this.state.phone}</SpanHover>
         </SpanStyles>
       </div>
     );
