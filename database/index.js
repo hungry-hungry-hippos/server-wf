@@ -46,7 +46,7 @@ const izakaya = new Restaurant({
   ],
   address: '1500 Irving St, San Francisco, CA 94122, USA',
   phone: '(415)724-5122',
-  website: 'http://www.izakayasozai.com/',
+  website: 'www.izakayasozai.com/',
   map_photo: 'http://d2wufhbvuoea5v.cloudfront.net/izakaya_googlemaps_screenshot.jpg',
 });
 
