@@ -2,7 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 
 import {
-  IconSize, SpanStyles, SpanHover,
+  IconSize, SpanStyles, SpanHover, LinkStyle, LinkHover,
 } from './Styles';
 
 class Website extends React.Component {
@@ -45,7 +45,11 @@ class Website extends React.Component {
       <div className="business-website">
         <IconSize src="https://s3-us-west-1.amazonaws.com/zagat-screenshots/website_icon.jpg"></IconSize>
         <SpanStyles>
-          <SpanHover>{this.state.website}</SpanHover>
+          <SpanHover>
+            <LinkStyle href={"http://" + this.state.website} target="_blank">
+              <LinkHover>{this.state.website}</LinkHover>
+            </LinkStyle>
+          </SpanHover>
         </SpanStyles>
       </div>
     );
