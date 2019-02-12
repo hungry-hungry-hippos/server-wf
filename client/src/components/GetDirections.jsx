@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { IconSize, SpanStyles, SpanHover, LinkStyle, LinkHover } from './Styles';
+import {
+  IconSize, SpanStyles, SpanHover, LinkStyle, LinkHover,
+} from './Styles';
 
 const GetDirections = () => (
     <div className="business-getDirections">

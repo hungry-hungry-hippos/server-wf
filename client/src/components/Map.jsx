@@ -3,7 +3,6 @@ import React from 'react';
 import { MapSize } from './Styles';
 
 class Map extends React.Component {
-
   render() {
     return (
       <div className="business-map">
