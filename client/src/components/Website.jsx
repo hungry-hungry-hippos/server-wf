@@ -10,7 +10,7 @@ class Website extends React.Component {
     super(props);
 
     this.state = {
-      website: 'www.izakayasozai.com',
+      website: '',
     };
 
     this.getWebsite = this.getWebsite.bind(this);
