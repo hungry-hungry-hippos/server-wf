@@ -102,4 +102,4 @@ const getIzakaya = (callback) => {
   });
 };
 
-module.exports = { getIzakaya };
+module.exports = { db, getIzakaya };
