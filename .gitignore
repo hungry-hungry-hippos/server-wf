@@ -1,7 +1,8 @@
-## MAC files ##
+## Mac OSX ##
 .DS_Store
 
 ## NPM ##
-npm
-npm-debug.log
 node_modules/
+
+## API Key ##
+client/src/config/googlemaps.js
