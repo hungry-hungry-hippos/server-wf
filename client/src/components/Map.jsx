@@ -1,7 +1,9 @@
 import React from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import {
+  Map, GoogleApiWrapper, Marker,
+} from 'google-maps-react';
 
-import { MapSize } from './Styles';
+// import { MapSize } from './Styles';
 
 import GoogleMapsAPI from '../config/googlemaps';
 
@@ -17,13 +19,18 @@ export class MapContainer extends React.Component {
       <div className="business-map">
         <Map
           google={this.props.google}
-          zoom={14}
+          zoom={16}
           style={mapStyles}
           initialCenter={{
-            lat: -1.2884,
-            lng: 36.8233,
+            lat: 37.763826,
+            lng: -122.47408,
           }}
-        />
+        >
+          <Marker
+            name={'Izakaya Sozai'}
+            position={{ lat: 37.763826, lng: -122.47408 }}
+          />
+        </Map>
       </div>
     );
   }
