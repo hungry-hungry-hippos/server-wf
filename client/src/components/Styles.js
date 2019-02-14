@@ -6,6 +6,9 @@ export const GlobalStyle = createGlobalStyle`
     src: url('/fonts/CalibreWeb-Regular.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
+  },
+  body {
+    background: ${props => (props.theme.background)};
   }
 `;
 
