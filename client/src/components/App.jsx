@@ -7,7 +7,6 @@ import ResAddress from './ResAddress.jsx';
 import Phone from './Phone.jsx';
 import Website from './Website.jsx';
 import GetDirections from './GetDirections.jsx';
-// import Map from './Map.jsx';
 import MapContainer from './Map.jsx';
 
 const App = () => (
@@ -17,7 +16,6 @@ const App = () => (
     <Phone />
     <Website />
     <GetDirections />
-    {/* <Map /> */}
     <MapContainer />
   </SideBar>
 );

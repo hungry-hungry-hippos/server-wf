@@ -56,10 +56,3 @@ export const LinkHover = styled.a`
     color: #b70038;
   }
 `;
-
-export const MapSize = styled.img`
-  width: 404px;
-  height: 271px;
-  padding-top: 10px;
-  cursor: grab;
-`;

@@ -3,9 +3,9 @@ import {
   Map, GoogleApiWrapper, Marker,
 } from 'google-maps-react';
 
-// import { MapSize } from './Styles';
-
 import GoogleMapsAPI from '../config/googlemaps';
+
+const styles = require('./GoogleMapStyles.json');
 
 const mapStyles = {
   width: '404px',
@@ -21,17 +21,24 @@ export class MapContainer extends React.Component {
           google={this.props.google}
           zoom={16}
           style={mapStyles}
+          // style={{ styles }}
           initialCenter={{
             lat: 37.763826,
             lng: -122.47408,
           }}
+          disableDefaultUI={true}
+          // mapTypeControl={true}
+          // mapTypeControlOptions={{
+          //   style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+          //   position: google.maps.ControlPosition.BOTTOM_LEFT,
+          // }}
         >
           <Marker
             name={'Izakaya Sozai'}
             position={{ lat: 37.763826, lng: -122.47408 }}
           />
         </Map>
-      </div>
+      </div >
     );
   }
 }
@@ -39,15 +46,3 @@ export class MapContainer extends React.Component {
 export default GoogleApiWrapper({
   apiKey: GoogleMapsAPI,
 })(MapContainer);
-
-// class Map extends React.Component {
-//   render() {
-//     return (
-//       <div className="business-map">
-//       <MapSize src="https://s3-us-west-1.amazonaws.com/zagat-screenshots/izakaya_googlemaps_screenshot.jpg" />
-//       </div>
-//     );
-//   }
-// }
-
-// export default Map;
