@@ -8,7 +8,7 @@ import GoogleMapsAPI from '../config/googlemaps';
 let map;
 let chicago = { lat: 41.85, lng: -87.65 };
 
-const buttonControl = (controlDiv, map) => {
+const ButtonControl = (controlDiv, map) => {
   // Set CSS for the control border.
   let controlUI = document.createElement('div');
   controlUI.style.backgroundColor = '#fff';
@@ -46,7 +46,7 @@ const initMap = () => {
   // Create the DIV to hold the control and call the CenterControl()
   // constructor passing in this DIV.
   let centerControlDiv = document.createElement('div');
-  let buttonControl = new buttonControl(centerControlDiv, map);
+  let buttonControl = new ButtonControl(centerControlDiv, map);
 
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
