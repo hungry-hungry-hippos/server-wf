@@ -1,21 +1,34 @@
+const path = require('path');
+
 module.exports = {
-  entry: __dirname + '/client/src/index.jsx',
   module: {
     rules: [
       {
-        test: [/\.jsx$/],
+        test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react', '@babel/preset-env']
-          }
-        }
-      }
-    ]
+            presets: ['@babel/preset-react', '@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-class-properties'],
+          },
+        },
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/CalibreWeb-Regular.woff2',
+          },
+        },
+      },
+    ],
   },
-   output: {
+  entry: path.join(__dirname, '/client/src/index.jsx'),
+  output: {
     filename: 'bundle.js',
-    path: __dirname + '/client/dist'
-  }
+    path: path.join(__dirname, '/client/dist'),
+  },
 };
